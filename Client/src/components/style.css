@@ -1,0 +1,481 @@
+input:focus {
+  border-bottom: 1px solid wheat !important;
+  box-shadow: 0 1px 0 0 wheat !important;
+}
+
+label.active {
+  color: wheat !important;
+}
+
+textarea:focus {
+  border-bottom: 1px solid wheat !important;
+  -webkit-box-shadow: 0 1px 0 0 wheat !important;
+  -moz-box-shadow: 0 1px 0 0 wheat !important;
+  box-shadow: 0 1px 0 0 wheat !important;
+}
+
+.datepicker-date-display, .datepicker-day-button:focus{
+  background-color: wheat;
+}
+
+.datepicker-table td.is-selected{
+  background-color: wheat;
+}
+
+.datepicker-cancel, .datepicker-done{
+  color: rgb(245, 196, 105);
+}
+
+[type="checkbox"]:checked+span:not(.lever):before{
+  border-right: 2px solid rgb(245, 199, 113);
+  border-bottom: 2px solid rgb(245, 199, 113);
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+  color: #dfaa60;
+}
+
+.chip:focus{
+  background-color: wheat;
+  border-bottom: 1px solid wheat !important;
+}
+
+.character-counter {
+  display: none;
+}
+
+.chips.chips-initial.input-field.focus{
+  border-bottom: 1px solid wheat !important;
+  box-shadow: 0 1px 0 0 #d4af7a;
+}
+
+.btn, .btn:hover{
+  background-color: wheat;
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input, .fb-btn, .submit {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.fb-btn:focus ,.submit:focus{
+  background-color: #4b4843 !important;
+  color: wheat;
+}
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  margin: 0 auto 100px;
+  margin-top: 3rem;
+  background: #fff;
+}
+
+.form {
+  position: relative;
+  width: 640px;
+  height: 100%;
+  transition: transform 1.2s ease-in-out;
+  padding: 50px 30px 0;
+}
+
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  left: 640px;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  padding-left: 260px;
+  background: #fff;
+  transition: transform 1.2s ease-in-out;
+}
+.cont.s--signup .sub-cont {
+  transform: translate3d(-640px, 0, 0);
+}
+
+.fb-btn, .submit {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: 360px;
+}
+.img:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  background-image: url("https://res.cloudinary.com/gabitze/image/upload/v1618231300/fundal_gso8e7.png");
+  background-size: cover;
+  transition: transform 1.2s ease-in-out;
+}
+.img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.cont.s--signup .img:before {
+  transform: translate3d(640px, 0, 0);
+}
+.img__text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 1.2s ease-in-out;
+}
+.img__text h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.img__text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cont.s--signup .img__text.m--up {
+  transform: translateX(520px);
+}
+.img__text.m--in {
+  transform: translateX(-520px);
+}
+.cont.s--signup .img__text.m--in {
+  transform: translateX(0);
+}
+.img__btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 36px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+.img__btn:after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+.img__btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s;
+}
+.img__btn span.m--in {
+  transform: translateY(-72px);
+}
+.cont.s--signup .img__btn span.m--in {
+  transform: translateY(0);
+}
+.cont.s--signup .img__btn span.m--up {
+  transform: translateY(72px);
+}
+
+h2 {
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+
+label span {
+  font-size: 12px;
+  color: #cfcfcf;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: #d4af7a;
+  text-transform: uppercase;
+}
+
+.fb-btn {
+  border: 2px solid #d3dae9;
+  color: #4b4843;
+}
+.fb-btn span {
+  font-weight: bold;
+  color: #4b4843;
+}
+
+.sign-in {
+  transition-timing-function: ease-out;
+}
+.cont.s--signup .sign-in {
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+  transform: translate3d(640px, 0, 0);
+}
+
+.sign-up {
+  transform: translate3d(-900px, 0, 0);
+}
+.cont.s--signup .sign-up {
+  transform: translate3d(0, 0, 0);
+}
+
+.icon-link {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 70px;
+}
+
+.icon-link img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.icon-link--insta {
+  left: auto;
+  right: 5px;
+}
+
+#toast-container
+{
+  top: 40rem !important;
+  left: 3rem !important;
+  right: auto !important;
+}
+
+.theForm{
+  background-color: #ffffe6;
+  margin-top: 3rem !important;
+  margin: auto;
+  width: 50%;
+  border: 3px solid rgb(231, 227, 184);
+  padding: 10px;
+}
+
+.theForm label, .theForm span{
+  font-size: 20px;
+}
+
+.theForm input:focus{
+  border-bottom: wheat !important;
+}
+
+.banner {
+  position: relative;
+  height: 300px;
+  background-image: url("https://t3.ftcdn.net/jpg/02/81/26/76/360_F_281267699_PNnrcEI82wU7EkpUewWBVGjcCoDRAxRQ.jpg");  
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.sendOrder {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.order {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px; 
+  background: #f5cc8fcc;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.order:hover, .order::after{
+  background: #f5b759c9;
+}
+
+@media (min-width: 568px) {
+  .name-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .name-item input, .name-item div {
+    width: calc(50% - 20px);
+  }
+  .name-item div input {
+    width:95%;
+  }
+  .name-item div label {
+    display:block;
+    padding-bottom:5px;
+  }
+}
+
+.carousel .carousel-item{
+  width: 35%;
+}
+
+.carousel.gall{
+  margin-top: -3%;
+  margin-bottom: 10rem;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+  background-color: #1011112d;
+}
+
+.row .col.s12{
+  margin: 0;
+  padding: 0;
+}
+
+.gallH3{
+  margin-left: 3%;
+  color:rgb(56, 48, 33);
+}
+
+.collapsible{
+  margin-top: 0%;
+  margin-bottom: 10%;
+}
+
+.collapsible-header{
+  color: wheat;
+}
+
+.row.forCard
+{
+  margin-left: 35%;
+}
+
+.row.forCard{
+  color: wheat;
+}
+
+.card-title{
+  color: wheat;
+  text-shadow: 4px 4px rgb(62, 69, 77);
+}
+
+.responsive-table.centered{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: rgba(248, 232, 202, 0.616);
+  font-size: 25px;
+}
+
+.manage{
+  background-color: rgba(248, 232, 202, 0.651);
+  width: 30%;
+  margin-left: 33%;
+  margin-bottom: 10%;
+  padding: 30px;
+}
+
+#saveBtn.submit{
+  margin-bottom: 10%;
+  margin-top: 25%;
+}
+
+.manage label span {
+  color: #4b4843;
+  font-size: 20px;
+}
+
+.collapsible-body{
+  background-color:  rgba(248, 232, 202, 0.616);
+}
+
+.favourite {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px; 
+  background: #faf8f6cc;
+  font-size: 6px;
+  color: rgb(248, 178, 113);
+  cursor: pointer;
+}
+
+.favourite:hover, .favourite::after{
+  background: #f5ebdac9;
+}
+
+.indicator-item{
+  visibility: hidden;
+}
+
+.theOrders{
+  background-color: #d4ae7a9c;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.theOrders p{
+  font-size: 25px;  
+}
