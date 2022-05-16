@@ -16,9 +16,9 @@ router.get('/allTabs', (req, res) => {
 })
 
 router.post('/saveTabImg', requireLogin, (req, res) => {
-    const { title, category, link, pret} = req.body
+    const { title, category, link, pret } = req.body
 
-    if (!link || !pret || !title|| !category ) {
+    if (!link || !pret || !title || !category) {
         return res.status(422).json({ error: "Please add all the fields" })
     }
 

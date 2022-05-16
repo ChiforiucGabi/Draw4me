@@ -58,10 +58,10 @@ const Gallery = () => {
             <div>
                 <div id="infoText">
                     <button id="close" onClick={closeFct}>X</button>
-                    <p>Hello, I'm glad to see you on my page :) I run a small business and I want to make you happy. </p>
+                    <p>Hello, we are glad to see you on my page :) We run a small business and we want to make you happy. </p>
                     <p>Do you want to get a tattoo? Do you need a new, fresh design, made just for u?  </p>
-                    <p>I think I can help :) I like to draw a lot of interesting things and I want to include your preferences as well.  </p>
-                    <p>So if you find something that you like here, just let me know. I prepared a form for you and we are ready to go :) </p>
+                    <p>We think we can help :) We like to draw a lot of interesting things and we want to include your preferences as well.  </p>
+                    <p>So if you find something that you like here, just let us know. We prepared a form for you and we are ready to go :) </p>
                 </div>
                 <h3 className="gallH3">My latest release</h3>
                 <div className="carousel gall">

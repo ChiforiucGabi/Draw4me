@@ -183,6 +183,14 @@ const TheForm = () => {
           </div>
         </form>
       </div><br />
+
+      <div class="switch" style={{ marginBottom: "2rem" }}>
+        <label>
+          I want a priority order
+          <input type="checkbox" />
+          <span class="lever"></span>
+        </label>
+      </div>
       <div className="sendOrder">
         <button className="order" type="submit" onClick={sendForm}>Send my Order</button>
       </div><br />

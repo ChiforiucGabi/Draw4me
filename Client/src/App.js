@@ -11,7 +11,9 @@ import Contact from './components/Contact.js'
 import Manage from './components/ManageAccount.js'
 import { reducer, initialState } from './reducers/userReducer'
 import Admin from './components/admin.js'
+import Cart from './components/Cart'
 import './App.css'
+import AddDrawing from './components/AddDrawing.js'
 
 export const UserContext = createContext()
 const Routing = () => {
@@ -23,7 +25,7 @@ const Routing = () => {
     if (user) {
       dispatch({ type: "USER", payload: user })
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -55,6 +57,12 @@ const Routing = () => {
       <Route path="/admin">
         <Admin></Admin>
       </Route>
+      <Route path="/cart">
+        <Cart></Cart>
+      </Route>
+      <Route path="/add-drawing">
+        <AddDrawing></AddDrawing>
+      </Route>
     </Switch>
   )
 }
@@ -63,11 +71,11 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <UserContext.Provider value={{ state, dispatch }}>
-    <BrowserRouter>
-      <NavBar />
-      <Routing />
-      <Footer />
-    </BrowserRouter>
+      <BrowserRouter>
+        <NavBar />
+        <Routing />
+        <Footer />
+      </BrowserRouter>
     </UserContext.Provider>
   );
 }

@@ -22,9 +22,10 @@ const Log = () => {
     const [email, setEmail] = useState("")
     const [userName, setUserName] = useState("")
     const signIn = () => {
-        if (email == "admin" && password == "gabi") {
+        if (email === "admin" && password === "gabi") {
             localStorage.setItem("admin", true)
             history.push("/admin");
+            window.location.reload();
             return;
         }
 

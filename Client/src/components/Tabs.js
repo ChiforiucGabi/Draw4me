@@ -1,21 +1,47 @@
 /* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react'
-import { useHistory } from "react-router-dom"
+
 const Tabs = () => {
 
-    const history = useHistory()
-    const fav = () => {
-        document.querySelector('.favourite').classList.toggle("favorite");
+    const [favouriteImages, setFavouriteImages] = useState([])
+
+
+    const addTofavourites = (id) => {
+
+        setFavouriteImages(favouriteImages => [...favouriteImages, id])
+        localStorage.setItem("favorite", favouriteImages)
+
     }
 
-    const displayAction = () => {
+    const removeFromFavourites = (id) => {
+        var array = [...favouriteImages]
+        var index = array.indexOf(id)
+        if (index !== -1) {
+            console.log("aici")
+
+            array.splice(index, 1)
+            setFavouriteImages(array)
+        }
+
+
+    }
+
+    const displayAction = (id) => {
         var test = localStorage.getItem("user");
         if (test !== null) {
+
+            if (favouriteImages.includes(id)) {
+
+                return [
+                    <button className="favourite" type="submit" onClick={() => removeFromFavourites(id)}><i className="material-icons">favorite</i></button>,
+                    <button className="favourite" type="submit" onClick={() => console.log(favouriteImages)}><i className="material-icons">add_shopping_cart</i></button>
+                ]
+            }
+
             return [
-                <button className="favourite" type="submit" onClick={fav}><i className="material-icons">favorite_border</i></button>,
-                <button className="favourite" type="submit" onClick={fav}><i className="material-icons">add_shopping_cart</i></button>
-                //daca ete in lista de liked apare rosu
-                //<button className="favourite" type="submit" onClick={fav}><i className="material-icons">favorite</i></button>
+
+                <button className="favourite" type="submit" onClick={() => addTofavourites(id)}><i className="material-icons">favorite_border</i></button>,
+                <button className="favourite" type="submit" onClick={() => console.log(favouriteImages)}><i className="material-icons">add_shopping_cart</i></button>
             ]
         } else {
             return [
@@ -32,7 +58,7 @@ const Tabs = () => {
         }).then(res => res.json())
             .then(result => {
                 setData(result.tabs)
-                console.log(data)
+                console.log(result.tabs)
             })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
@@ -45,10 +71,18 @@ const Tabs = () => {
                     <li className="tab col s3"><a href="#digital">Digital Art</a></li>
                     <li className="tab col s3"><a href="#comm">Commisions</a></li>
                     <li className="tab col s3"><a href="#other">Other</a></li>
+
                 </ul>
             </div>
             <div className="col s12 tat" id="tattoos">
                 <div align="center" className="galleryTatt">
+                    <div className='row' style={{ margin: "auto", maxWidth: "30%", marginBottom: "2rem" }}>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">search</i>
+                            <textarea placeholder='Search' id="icon_prefix2" class="materialize-textarea"></textarea>
+                        </div>
+
+                    </div>
                     <ul id="img">
                         {
                             data.map(item => {
@@ -60,7 +94,7 @@ const Tabs = () => {
                                                 <div className="middle">
                                                     <div className="text">Click now, and u can download my art :)</div>
                                                 </div>
-                                            </div><p>{item.title} - {item.pret}</p>{displayAction()}</a>
+                                            </div><p>{item.title} - {item.pret}</p>{displayAction(item._id)}</a>
                                     )
                                 }
                             })
@@ -77,6 +111,13 @@ const Tabs = () => {
             </div>
             <div className="col s12 dig" id="digital">
                 <div align="center" className="gallery">
+                    <div className='row' style={{ margin: "auto", maxWidth: "30%", marginBottom: "2rem" }}>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">search</i>
+                            <textarea placeholder='Search' id="icon_prefix2" class="materialize-textarea"></textarea>
+                        </div>
+
+                    </div>
                     <ul id="img">
                         {
                             data.map(item => {
@@ -105,6 +146,13 @@ const Tabs = () => {
             </div>
             <div className="col s12 comm" id="comm">
                 <div align="center" className="gallery">
+                    <div className='row' style={{ margin: "auto", maxWidth: "30%", marginBottom: "2rem" }}>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">search</i>
+                            <textarea placeholder='Search' id="icon_prefix2" class="materialize-textarea"></textarea>
+                        </div>
+
+                    </div>
                     <ul id="img">
                         {
                             data.map(item => {
@@ -133,6 +181,13 @@ const Tabs = () => {
             </div>
             <div className="col s12 tat" id="other">
                 <div align="center" className="gallery">
+                    <div className='row' style={{ margin: "auto", maxWidth: "30%", marginBottom: "2rem" }}>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">search</i>
+                            <textarea placeholder='Search' id="icon_prefix2" class="materialize-textarea"></textarea>
+                        </div>
+
+                    </div>
                     <ul id="img">
                         {
                             data.map(item => {
